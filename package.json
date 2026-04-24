@@ -1,0 +1,40 @@
+{
+  "name": "final-project-card-store",
+  "version": "1.0.0",
+  "description": "Ecommerce API for Cardboard Kingdom - trading cards (Pokemon, MTG, Riftbound) with authentication and order management.",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --env-file=.env --watch src/server.js",
+    "start": "node src/server.js",
+    "build": "npx prisma generate",
+    "migrate": "npx prisma migrate dev",
+    "seed": "npx prisma db seed",
+    "postinstall": "npm run build && npx prisma migrate deploy && npm run seed"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.1",
+    "pg": "^8.20.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.5.0",
+    "prettier": "^3.8.3",
+    "prisma": "^5.22.0"
+  }
+}
