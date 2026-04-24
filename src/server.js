@@ -51,15 +51,13 @@ const swaggerSpec = swaggerJsdoc(swaggerOptions);
 // Serve Swagger UI
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-// Serve static files from public directory
-app.use(express.static('public'));
-
-// Serve static files from images directory
-app.use('/images', express.static('images'));
-
 // Health check route (important for Render + debugging)
 app.get('/', (req, res) => {
-  res.sendFile('index.html', { root: 'public' });
+  res.json({
+    message: 'Cardboard Kingdom API is running',
+    version: '1.0.0',
+    docs: 'Visit /api-docs for API documentation'
+  });
 });
 
 // API info route
@@ -93,8 +91,7 @@ app.get('/api', (req, res) => {
         update: 'PUT /api/orders/:id (admin only)'
       }
     },
-    docs: 'Use tools like Postman or curl to test the API endpoints',
-    frontend: 'Visit / to use the web interface'
+    docs: 'Use tools like Postman or curl to test the API endpoints'
   });
 });
 

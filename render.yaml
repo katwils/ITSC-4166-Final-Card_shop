@@ -16,6 +16,6 @@ services:
       - key: PORT
         value: 10000
 
-  - type: pserv
-    name: cardboard-kingdom-db
-    runtime: node
+databases:
+  - name: cardboard-kingdom-db
+    plan: free

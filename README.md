@@ -6,7 +6,6 @@ A REST API for Cardboard Kingdom - an ecommerce platform specializing in trading
 
 - **API Base URL**: [https://cardboard-kingdom-api.onrender.com](https://cardboard-kingdom-api.onrender.com)
 - **API Documentation**: [https://cardboard-kingdom-api.onrender.com/api-docs](https://cardboard-kingdom-api.onrender.com/api-docs)
-- **Frontend**: [https://cardboard-kingdom-api.onrender.com](https://cardboard-kingdom-api.onrender.com)
 
 ## Project Requirements Checklist
 
@@ -195,11 +194,6 @@ The application is configured for deployment on Render with:
 ├── prisma/
 │   ├── schema.prisma             # Database schema
 │   └── seed.js                   # Database seeding
-├── public/                       # Static files & frontend
-│   ├── index.html
-│   ├── styles.css
-│   └── app.js
-├── images/                       # Card images
 ├── TESTING_PLAN.md               # Testing documentation
 ├── render.yaml                   # Render deployment config
 └── package.json
