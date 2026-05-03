@@ -27,6 +27,10 @@ const swaggerOptions = {
         url: 'http://localhost:3000',
         description: 'Development server',
       },
+      {
+        url: 'https://cardboard-kingdom-api.onrender.com',
+        description: 'Production server',
+      },
     ],
     components: {
       securitySchemes: {
