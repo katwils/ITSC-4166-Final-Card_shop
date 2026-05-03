@@ -3,7 +3,7 @@ services:
     name: cardboard-kingdom-api
     runtime: node
     buildCommand: npm install
-    startCommand: npm start
+    startCommand: npx prisma migrate deploy && npm run seed && npm start
     envVars:
       - key: NODE_ENV
         value: production
