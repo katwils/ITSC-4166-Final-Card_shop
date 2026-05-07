@@ -28,7 +28,7 @@ const swaggerOptions = {
         description: 'Development server',
       },
       {
-        url: 'https://cardboard-kingdom-api.onrender.com',
+        url: 'https://itsc-4166-final-card-shop-utmr.onrender.com/',
         description: 'Production server',
       },
     ],
